@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+</head>
+
+<!-- this opens a alert box using JS  -->
+<body onload="alert('This is an alert box')">
+
+<!-- grab the text from the text box on click, and change the title -->
+<script type="text/javascript">
+	function substitute() {
+		var myValue = document.getElementById('MyTextBox').value;
+
+		if (myValue.length == 0) {
+			alert('Please enter in a value');
+			return;
+		}
+		var myTitle =  document.getElementById('title');
+		myTitle.innerHTML = myValue;
+	}
+</script>
+
+<!-- title. id="" just lets us change the title when needed -->
+
+<h1 id="title">JavaScript</h1>
+
+<p>Put something in the textbox and click submit to change the text above.</p>
+
+<!-- add a text box next to a submit button -->
+
+<input type="text" id="MyTextBox" />
+<input type="submit" value="123" onclick="substitute()" />
+
+
+</body>
+</html>
